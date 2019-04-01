@@ -20,24 +20,25 @@
     OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
     THE SOFTWARE.
 */
-package com.djrapitops.extension;
+package com.djrapitops.extension.minigames;
 
-import com.djrapitops.plan.extension.DataExtension;
+import com.comze_instancelabs.minigamesapi.sql.MainSQL;
 import com.djrapitops.plan.extension.annotation.PluginInfo;
 import com.djrapitops.plan.extension.icon.Color;
-import com.djrapitops.plan.extension.icon.Family;
 
 /**
- * Template for new DataExtension.
+ * DataExtension for minigame.
  *
  * @author Rsl1122
  */
-@PluginInfo(name = "", iconName = "", iconFamily = Family.SOLID, color = Color.NONE)
-public class NewExtension implements DataExtension {
+@PluginInfo(
+        name = "Minigame: Bow Bash",
+        iconName = "carrot",
+        color = Color.BROWN
+)
+public class BowBashExtension extends MinigameLibExtension {
 
-    public NewExtension() {
-        // TODO Add required API classes
+    public BowBashExtension(MainSQL sql) {
+        super(sql);
     }
-
-    // TODO Add Provider methods
 }

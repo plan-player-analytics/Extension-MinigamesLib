@@ -20,34 +20,25 @@
     OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
     THE SOFTWARE.
 */
-package com.djrapitops.extension;
+package com.djrapitops.extension.minigames;
 
-import com.djrapitops.extension.minigames.MinigameLibExtension;
-import com.djrapitops.plan.extension.DataExtension;
-import com.djrapitops.plan.extension.extractor.ExtensionExtractor;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
+import com.comze_instancelabs.minigamesapi.sql.MainSQL;
+import com.djrapitops.plan.extension.annotation.PluginInfo;
+import com.djrapitops.plan.extension.icon.Color;
 
 /**
- * Test for the implementation of the new extension
+ * DataExtension for minigame.
  *
  * @author Rsl1122
  */
-class ExtensionImplementationTest {
+@PluginInfo(
+        name = "Minigame: Bed Wars",
+        iconName = "bed",
+        color = Color.RED
+)
+public class BedWarsExtension extends MinigameLibExtension {
 
-    private ExtensionExtractor extractor;
-
-    @BeforeEach
-    void prepareExtractor() {
-        DataExtension extension = new MinigameLibExtension();
-        extractor = new ExtensionExtractor(extension);
+    public BedWarsExtension(MainSQL sql) {
+        super(sql);
     }
-
-    @Test
-    @DisplayName("API is implemented correctly")
-    void noImplementationErrors() {
-        extractor.validateAnnotations();
-    }
-
 }

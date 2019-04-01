@@ -20,32 +20,25 @@
     OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
     THE SOFTWARE.
 */
-package com.djrapitops.extension;
+package com.djrapitops.extension.minigames;
 
-import com.djrapitops.plan.extension.DataExtension;
-
-import java.util.Optional;
+import com.comze_instancelabs.minigamesapi.sql.MainSQL;
+import com.djrapitops.plan.extension.annotation.PluginInfo;
+import com.djrapitops.plan.extension.icon.Color;
 
 /**
- * Factory for DataExtension.
+ * DataExtension for minigame.
  *
  * @author Rsl1122
  */
-public class NewExtensionFactory {
+@PluginInfo(
+        name = "Minigame: Flying Cars",
+        iconName = "sleigh",
+        color = Color.INDIGO
+)
+public class FlyingCarsExtension extends MinigameLibExtension {
 
-    private boolean isAvailable() {
-        try {
-            Class.forName("");
-            return true;
-        } catch (ClassNotFoundException e) {
-            return false;
-        }
-    }
-
-    public Optional<DataExtension> createExtension() {
-        if (isAvailable()) {
-            return Optional.of(new NewExtension());
-        }
-        return Optional.empty();
+    public FlyingCarsExtension(MainSQL sql) {
+        super(sql);
     }
 }
