@@ -56,7 +56,8 @@ public abstract class MinigameLibExtension implements DataExtension {
             description = "How many wins the player has",
             priority = 10,
             iconName = "trophy",
-            iconColor = Color.AMBER
+            iconColor = Color.AMBER,
+            showInPlayerTable = true
     )
     public long wins(UUID playerUUID) {
         return sql.getWins(new FakePlayer(playerUUID));
