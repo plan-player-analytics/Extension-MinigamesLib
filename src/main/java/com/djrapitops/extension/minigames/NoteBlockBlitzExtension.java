@@ -1,5 +1,5 @@
 /*
-    Copyright(c) 2019 Risto Lahtela (Rsl1122)
+    Copyright(c) 2019 Risto Lahtela (AuroraLS3)
 
     The MIT License(MIT)
 
@@ -29,7 +29,7 @@ import com.djrapitops.plan.extension.icon.Color;
 /**
  * DataExtension for minigame.
  *
- * @author Rsl1122
+ * @author AuroraLS3
  */
 @PluginInfo(
         name = "Minigame: NoteBlock Blitz",
