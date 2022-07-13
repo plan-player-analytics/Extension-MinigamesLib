@@ -1,5 +1,5 @@
 /*
-    Copyright(c) 2019 Risto Lahtela (AuroraLS3)
+    Copyright(c) 2019 AuroraLS3
 
     The MIT License(MIT)
 
@@ -20,37 +20,25 @@
     OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
     THE SOFTWARE.
 */
-package com.djrapitops.extension;
+package net.playeranalytics.extension.minigameslib.minigames;
 
-import com.djrapitops.plan.extension.DataExtension;
-
-import java.util.Collections;
-import java.util.List;
+import com.comze_instancelabs.minigamesapi.sql.MainSQL;
+import com.djrapitops.plan.extension.annotation.PluginInfo;
+import com.djrapitops.plan.extension.icon.Color;
 
 /**
- * Factory for DataExtension.
+ * DataExtension for minigame.
  *
  * @author AuroraLS3
  */
-public class MinigameLibExtensionFactory {
+@PluginInfo(
+        name = "Minigame: NoteBlock Blitz",
+        iconName = "music",
+        color = Color.BROWN
+)
+public class NoteBlockBlitzExtension extends MinigameLibExtension {
 
-    private boolean isAvailable() {
-        try {
-            Class.forName("com.comze_instancelabs.minigamesapi.MinigamesAPI");
-            return true;
-        } catch (ClassNotFoundException e) {
-            return false;
-        }
-    }
-
-    public List<DataExtension> createExtensions() {
-        try {
-            if (isAvailable()) {
-                return new MinigameFinder().findMinigames();
-            }
-        } catch (IllegalStateException e) {
-            /* Plugin not available */
-        }
-        return Collections.emptyList();
+    public NoteBlockBlitzExtension(MainSQL sql) {
+        super(sql);
     }
 }

@@ -1,5 +1,5 @@
 /*
-    Copyright(c) 2019 Risto Lahtela (AuroraLS3)
+    Copyright(c) 2019 AuroraLS3
 
     The MIT License(MIT)
 
@@ -20,10 +20,10 @@
     OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
     THE SOFTWARE.
 */
-package com.djrapitops.extension.minigames;
+package net.playeranalytics.extension.minigameslib.minigames;
 
 import com.comze_instancelabs.minigamesapi.sql.MainSQL;
-import com.djrapitops.extension.FakePlayer;
+import net.playeranalytics.extension.minigameslib.FakePlayer;
 import com.djrapitops.plan.extension.CallEvents;
 import com.djrapitops.plan.extension.DataExtension;
 import com.djrapitops.plan.extension.annotation.NumberProvider;

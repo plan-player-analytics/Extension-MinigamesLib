@@ -1,5 +1,5 @@
 /*
-    Copyright(c) 2019 Risto Lahtela (AuroraLS3)
+    Copyright(c) 2019 AuroraLS3
 
     The MIT License(MIT)
 
@@ -20,25 +20,37 @@
     OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
     THE SOFTWARE.
 */
-package com.djrapitops.extension.minigames;
+package net.playeranalytics.extension.minigameslib;
 
-import com.comze_instancelabs.minigamesapi.sql.MainSQL;
-import com.djrapitops.plan.extension.annotation.PluginInfo;
-import com.djrapitops.plan.extension.icon.Color;
+import com.djrapitops.plan.extension.DataExtension;
+
+import java.util.Collections;
+import java.util.List;
 
 /**
- * DataExtension for minigame.
+ * Factory for DataExtension.
  *
  * @author AuroraLS3
  */
-@PluginInfo(
-        name = "Minigame: TrapdoorSpleef",
-        iconName = "door-open",
-        color = Color.BROWN
-)
-public class TrapdoorSpleefExtension extends MinigameLibExtension {
+public class MinigameLibExtensionFactory {
 
-    public TrapdoorSpleefExtension(MainSQL sql) {
-        super(sql);
+    private boolean isAvailable() {
+        try {
+            Class.forName("com.comze_instancelabs.minigamesapi.MinigamesAPI");
+            return true;
+        } catch (ClassNotFoundException e) {
+            return false;
+        }
+    }
+
+    public List<DataExtension> createExtensions() {
+        try {
+            if (isAvailable()) {
+                return new MinigameFinder().findMinigames();
+            }
+        } catch (IllegalStateException e) {
+            /* Plugin not available */
+        }
+        return Collections.emptyList();
     }
 }

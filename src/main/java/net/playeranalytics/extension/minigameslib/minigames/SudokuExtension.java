@@ -1,5 +1,5 @@
 /*
-    Copyright(c) 2019 Risto Lahtela (AuroraLS3)
+    Copyright(c) 2019 AuroraLS3
 
     The MIT License(MIT)
 
@@ -20,7 +20,7 @@
     OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
     THE SOFTWARE.
 */
-package com.djrapitops.extension.minigames;
+package net.playeranalytics.extension.minigameslib.minigames;
 
 import com.comze_instancelabs.minigamesapi.sql.MainSQL;
 import com.djrapitops.plan.extension.annotation.PluginInfo;
@@ -32,13 +32,13 @@ import com.djrapitops.plan.extension.icon.Color;
  * @author AuroraLS3
  */
 @PluginInfo(
-        name = "Minigame: SeaBattle",
-        iconName = "bath",
-        color = Color.BLUE
+        name = "Minigame: Sudoku",
+        iconName = "brain",
+        color = Color.DEEP_ORANGE
 )
-public class SeaBattleExtension extends MinigameLibExtension {
+public class SudokuExtension extends MinigameLibExtension {
 
-    public SeaBattleExtension(MainSQL sql) {
+    public SudokuExtension(MainSQL sql) {
         super(sql);
     }
 }

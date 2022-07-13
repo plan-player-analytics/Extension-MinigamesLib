@@ -1,5 +1,5 @@
 /*
-    Copyright(c) 2019 Risto Lahtela (AuroraLS3)
+    Copyright(c) 2019 AuroraLS3
 
     The MIT License(MIT)
 
@@ -20,7 +20,7 @@
     OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
     THE SOFTWARE.
 */
-package com.djrapitops.extension.minigames;
+package net.playeranalytics.extension.minigameslib.minigames;
 
 import com.comze_instancelabs.minigamesapi.sql.MainSQL;
 import com.djrapitops.plan.extension.annotation.PluginInfo;
@@ -32,13 +32,13 @@ import com.djrapitops.plan.extension.icon.Color;
  * @author AuroraLS3
  */
 @PluginInfo(
-        name = "Minigame: SkyWars",
-        iconName = "cloud-sun-rain",
-        color = Color.CYAN
+        name = "Minigame: Horse Racing Plus",
+        iconName = "horse-head",
+        color = Color.BROWN
 )
-public class SkyWarsExtension extends MinigameLibExtension {
+public class HorseRacingPlusExtension extends MinigameLibExtension {
 
-    public SkyWarsExtension(MainSQL sql) {
+    public HorseRacingPlusExtension(MainSQL sql) {
         super(sql);
     }
 }
