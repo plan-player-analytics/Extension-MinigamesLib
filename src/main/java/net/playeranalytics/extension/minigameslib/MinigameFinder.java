@@ -25,7 +25,6 @@ package net.playeranalytics.extension.minigameslib;
 import com.comze_instancelabs.minigamesapi.MinigamesAPI;
 import com.comze_instancelabs.minigamesapi.PluginInstance;
 import com.comze_instancelabs.minigamesapi.sql.MainSQL;
-import com.djrapitops.extension.minigames.*;
 import com.djrapitops.plan.extension.DataExtension;
 import net.playeranalytics.extension.minigameslib.minigames.*;
 import org.bukkit.Bukkit;

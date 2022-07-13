@@ -24,7 +24,7 @@
         <repository>
             <id>MinigamesAPI-Repo</id>
             <name>MinigamesAPI Repository</name>
-            <url>http://nexus.xworlds.eu/nexus/content/groups/mce/</url>
+            <url>https://nexus.xworlds.eu/nexus/content/groups/mce/</url>
         </repository>
 
         <!-- Platforms -->
